@@ -46,24 +46,17 @@
                 </div>
             @endif
 
-            <div class="card text-center">
-              <div class="card-body">
-                <h5 class="card-title">Bem vindo</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="btn btn-primary">
-                  Registre-se
-                </a>
-                @endif
-
-                @if (Route::has('register'))
-                <a href="{{ route('login') }}" class="btn btn-primary">
-                  Entrar
-                </a>
-                @endif
-
-              </div>
+            <div class="card mb-3">
+                <img src="{{asset('img/laravel-logo.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Teste Laravel by: Diogo Alves</h5>
+                <p class="card-text">Essa pagina é uma demonstração básica do meu conhecimento em PHP/laravel 
+                Crud de publicação com reset de senha via e-mail e utilização do Laravel "auth"    
+                </p>
+                <p class="card-text"><small class="text-muted">para contato: diogo.a7x@live.com</small></p>
+                <a href="{{ route('login') }}" class="btn btn-primary">Entrar</a>
+                <a href="{{ route('register') }}" class="btn btn-primary">Registre-se</a>
+                </div>
             </div>
         </body>
 </html>

@@ -70,4 +70,11 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    /*public function excluirUser($id){
+        $user = new User();
+        User::find($id)->delete();
+
+        return redirect()->route('welcome');
+    }*/
 }

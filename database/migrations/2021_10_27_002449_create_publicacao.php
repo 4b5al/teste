@@ -8,14 +8,14 @@ class CreatePublicacao extends Migration
 {
     /**
      * Run the migrations.
-     *
+     *Criação da tabela publicação
      * @return void
      */
     public function up()
     {
         Schema::create('publicacao', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
+            $table->string('titulo');
             $table->string('data');
             $table->text('mensagem');
             $table->timestamps();

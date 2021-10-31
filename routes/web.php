@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/home', [App\Http\Controllers\HomeController::class, 'salvar'])->name('home');
+Route::get('/gerenciar', [App\Http\Controllers\HomeController::class, 'listar'])->name('gerenciar');
+Route::get('/gerenciar/editar/{id}', [App\Http\Controllers\HomeController::class, 'editar'])->name('editar');
+Route::get('/gerenciar/excluir/{id}', [App\Http\Controllers\HomeController::class, 'excluir'])->name('excluir');
+
+//Route::get('/home/excluirUser/{id}', [App\Http\Controllers\Auth\RegisterController::class, 'excluirUser'])->name('excluirUser');
 Route::resource('tarefa', 'App\Http\Controllers\TarefaController');
